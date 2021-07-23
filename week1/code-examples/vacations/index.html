@@ -1,0 +1,60 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="index.css" />
+    <link rel="icon" href="./images/favicon-16x16.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My vacations collection</title>
+  </head>
+
+  <body>
+    <div class="header">
+      <h1>MY VACATIONS</h1>
+    </div>
+
+    <div class="pictures">
+      <!-- This is a comment!!! shortcut: ctrl + / -->
+      <img id="the-image" src="" />
+    </div>
+
+    <div class="buttons">
+      <button onclick="showLastImage()">Last</button>
+      <button onclick="showNextImage()">Next</button>
+    </div>
+
+    <script>
+      // This is a comment! Shortcut Ctrl + /
+      const imageUrls = [
+        "https:/images.pexels.com/photos/2559941/pexels-photo-2559941.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+        "https:/images.pexels.com/photos/416726/pexels-photo-416726.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+        "https://images.pexels.com/photos/2559936/pexels-photo-2559936.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+        "https://images.pexels.com/photos/1687530/pexels-photo-1687530.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+      ];
+
+      let index = 0;
+      const img = document.getElementById("the-image");
+      // set the image to the first link when the page first loads
+      img.src = imageUrls[0];
+
+      function showNextImage() {
+        index += 1; // or index = index + 1
+        if (index === imageUrls.length) index = 0;
+        /**
+         * if (index === imageUrls.length) {
+         *   index = 0;
+         * }
+         */
+
+        // to print something out to the dev console
+        console.log("index", index);
+        img.src = imageUrls[index];
+      }
+
+      function showLastImage() {
+        index -= 1; // or index = index - 1
+        if (index === -1) index = imageUrls.length - 1;
+        console.log("index", index);
+        img.src = imageUrls[index];
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,47 @@
+<html>
+  <head>
+    <title>My Buddies</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
+  <body>
+    <div class="header">
+      <h1>My Buddies</h1>
+    </div>
+
+    <div id="js-friend-list" class="friend-list"></div>
+  </body>
+  <script>
+    const friends = [
+      {
+        avatar:
+          "https://avataaars.io/?avatarStyle=Circle&topType=ShortHairFrizzle&accessoriesType=Prescription01&hatColor=PastelYellow&hairColor=Blonde&facialHairType=MoustacheFancy&facialHairColor=Brown&clotheType=ShirtScoopNeck&clotheColor=Heather&eyeType=Squint&eyebrowType=DefaultNatural&mouthType=Grimace&skinColor=DarkBrown",
+        name: "Minh",
+        mood: "Happy",
+      },
+      {
+        avatar:
+          "https://avataaars.io/?avatarStyle=Circle&topType=LongHairNotTooLong&accessoriesType=Prescription02&hairColor=Blonde&facialHairType=MoustacheMagnum&facialHairColor=Platinum&clotheType=Overall&clotheColor=PastelRed&graphicType=Selena&eyeType=Wink&eyebrowType=UpDown&mouthType=Default&skinColor=Brown",
+        name: "Amelia",
+        mood: "Awesome",
+      },
+    ];
+
+    const friendListDom = document.getElementById("js-friend-list");
+    friendListDom.innerHTML = friends
+      .map(
+        (friend) =>
+          `
+      <div class="friend-card">
+        <div class="avatar">
+          <img
+            src="${friend.avatar}"
+          />
+        </div>
+        <div class="name">${friend.name}</div>
+        <div class="mood">${friend.mood}</div>
+      </div>
+      `
+      )
+      .join("");
+  </script>
+</html>

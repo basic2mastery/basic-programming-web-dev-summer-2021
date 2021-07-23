@@ -1,0 +1,33 @@
+body {
+  text-align: center;
+  background-color: azure;
+  margin: 0px;
+}
+
+.friend-list {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.friend-card {
+  display: flex;
+  background-color: bisque;
+  margin: 5px 0 0 0;
+  width: 500px;
+  border-radius: 10px;
+}
+
+.friend-card img {
+  width: 70px;
+  padding: 10px;
+}
+
+.name,
+.mood {
+  justify-content: center;
+  display: flex;
+  flex-flow: column;
+  align-content: center;
+  width: 100px;
+}

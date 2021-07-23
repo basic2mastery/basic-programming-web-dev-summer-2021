@@ -1,0 +1,50 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,400,400italic,500,500italic,700,700italic,900,900italic&subset=latin,latin-ext,cyrillic,cyrillic-ext,greek-ext,greek,vietnamese);
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap");
+
+body {
+  font-family: Rubik, Roboto;
+  text-align: center;
+  background: #c9d4dd;
+  margin: 0px;
+}
+
+.header {
+  color: #f1f1f1;
+  padding: 30px;
+  background: #2b458d;
+}
+
+.friend-list {
+  margin-top: 30px;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.friend {
+  display: flex;
+  background-color: rgb(236, 236, 241);
+  margin: 5px 0 0 0;
+  width: 500px;
+  border-radius: 8px;
+}
+
+/* TIPS: don't just use general img */
+.friend img {
+  width: 70px;
+  padding: 10px;
+}
+
+.name,
+.mood {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-content: center;
+  width: 100px;
+}
+
+.mood {
+  color: #10568f;
+}

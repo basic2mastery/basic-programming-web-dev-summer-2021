@@ -1,0 +1,48 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="images.css" />
+    <title>My vacations</title>
+  </head>
+
+  <body>
+    <div>
+      <h1>My vacations</h1>
+    </div>
+
+    <div class="pictures">
+      <img id="the-image" src="" />
+    </div>
+
+    <div class="buttons">
+      <button onclick="showPreviousImage()">Previous</button>
+      <button onclick="showNextImage()">Next</button>
+    </div>
+  </body>
+
+  <script>
+    const imageUrls = [
+      "https://images.pexels.com/photos/412681/pexels-photo-412681.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+      "https://images.pexels.com/photos/416726/pexels-photo-416726.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+      "https://images.pexels.com/photos/38136/pexels-photo-38136.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+      "https://images.pexels.com/photos/2559936/pexels-photo-2559936.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+    ];
+
+    let index = 0;
+
+    const a = 1;
+    const img = document.getElementById("the-image");
+
+    // increase index to 1
+    function showNextImage() {
+      console.log("I'm inside showNextImage function");
+      console.log("a inside of function", a);
+
+      img.src = imageUrls[index];
+      // assign
+      index += 1;
+      if (index === imageUrls.length) {
+        index = 0;
+      }
+    }
+  </script>
+</html>
