@@ -69,6 +69,12 @@ NaN
 the empty string ("")
 ```
 
+## True/False table
+
+You should know these tables by heart regardless of what computer language you are learning or will learn. This is universal. If anything, the very least thing the Martians or Venusians :alien: will agree with us are these tables.
+
+https://docs.google.com/spreadsheets/d/1duDk-GxJAFwGhw1MPqj--QNpF63dPlUNPo6Dxv_aWxs
+
 ## == vs ===
 
 `==` is used to compare just the values
@@ -145,6 +151,35 @@ console.log(str1 + 8); // 308
 console.log(str1 - 8) + // 22
   "30"; // 30
 parseInt(str1); // 30
+```
+
+## Functions
+
+As you already know in our execises and homework, this is how you _typically_ define a function, using the `function` keyword:
+
+```javascript
+function printMe(str) {
+  console.log(str);
+}
+printMe("hey!"); // hey!
+```
+
+Another way you can define a function is to create a variable and assign a function to it! The right side of the `=` sign is a function, the left side of the `=` is the variable. Note that this function on the right side doesn't have a name. It's called an annonymous function!
+
+```javascript
+const printMe = function (str) {
+  console.log(str);
+};
+printMe("hey!"); // hey!
+```
+
+A third way to define a function is to use the "Arrow" (`=>`) function definition:
+
+```javascript
+const printMe = (str) => {
+  console.log(str);
+};
+printMe("hey!"); // hey!
 ```
 
 ---
