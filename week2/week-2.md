@@ -6,6 +6,10 @@
 
 https://jsfiddle.net/mreigen/mqtv0d2o/
 
+In class execise on Wednesday:
+
+https://jsfiddle.net/mreigen/8hjgx3by
+
 ---
 
 `var` vs `let`
